@@ -21,6 +21,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: false
+          load: true
       - name: Test
         env:
           IMAGE_ID: ${{ steps.docker_build.outputs.imageid }}

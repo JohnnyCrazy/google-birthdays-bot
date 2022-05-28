@@ -7,7 +7,8 @@ Telegram bot, which sends out a daily digest of birthdays at that day. Source of
 ## Requirements
 
 - PostgreSQL
-- WebServer (OAuth2)
+- dbmate
+- public-reachable webserver (for developing: localtunnel or ngrok)
 - Telegram Bot API Key
 
 ## Configuration
