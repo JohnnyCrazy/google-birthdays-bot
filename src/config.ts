@@ -1,0 +1,10 @@
+export const DATABASE_URL =
+  process.env.DATABASE_URL ?? 'postgresql://postgres:postgres@localhost:5432/google_birthdays_bot?sslmode=disable';
+export const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
+export const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID!;
+export const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!;
+export const GOOGLE_REDIRECT_URL = process.env.GOOGLE_REDIRECT_URL!;
+export const PORT = Number(process.env.PORT ?? '3000');
+export const JWT_SECRET = process.env.JWT_SECRET!;
+export const TZ = process.env.TZ ?? 'Europe/Berlin';
+export const BIRTHDAY_NOTIFICATIONS_CRON = process.env.BIRTHDAY_NOTIFICATIONS_CRON ?? '0 10 * * *';

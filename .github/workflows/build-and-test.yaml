@@ -1,0 +1,27 @@
+name: 'Build & Test'
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+      - name: Setup | pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
+          run_install: false
+      - name: Setup | NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17
+          cache: 'pnpm'
+      - name: Setup | Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Test
+        run: pnpm run test -- run

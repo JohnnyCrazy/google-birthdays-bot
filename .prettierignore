@@ -1,0 +1,5 @@
+node_modules/
+kustomize/
+dist/
+build/
+src/zapatos
