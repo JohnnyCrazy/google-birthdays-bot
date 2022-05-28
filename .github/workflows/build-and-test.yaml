@@ -22,4 +22,6 @@ jobs:
           platforms: linux/amd64
           push: false
       - name: Test
-        run: docker run --rm --entrypoint pnpm ${{ steps.docker_build.outputs.imageid }} -- run test
+        env:
+          IMAGE_ID: ${{ steps.docker_build.outputs.imageid }}
+        run: docker run --rm --entrypoint pnpm $IMAGE_ID -- run test
